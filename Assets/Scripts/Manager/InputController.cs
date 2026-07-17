@@ -27,7 +27,8 @@ public class InputController : MonoBehaviour
         hor = Input.GetAxisRaw(HORIZONTAL);
         ver=Input.GetAxisRaw(VERTICAL);
         rotX = Input.GetAxisRaw(MOUSEX);
-        rotY=Input.GetAxisRaw(MOUSRY);  
+        rotY=Input.GetAxisRaw(MOUSRY);
+
 
     }
 

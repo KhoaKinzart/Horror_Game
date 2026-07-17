@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 
 
@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     bool invertedCamera = false;
 
     [SerializeField] Transform pivot = null;
+
+
+    float cameraPitch = 0f;
 
     float hor, ver;
 
@@ -87,18 +90,10 @@ public class PlayerController : MonoBehaviour
 
         yAmount *= RotSpeed * RotMultiplier;
 
-        pivot.Rotate(Vector3.right, yAmount);
+        cameraPitch += yAmount;
+        cameraPitch = Mathf.Clamp(cameraPitch, -45, 45);
+        pivot.localRotation=Quaternion.Euler(cameraPitch, 0, 0);
 
-        //set limit
-        float angle = pivot.eulerAngles.x;
-        if(angle>45 && angle < 180)
-        {
-            pivot.rotation = Quaternion.Euler(45, 0, 0);
-        }
-        if (angle >180 && angle < 315)
-        {
-            pivot.rotation = Quaternion.Euler(315, 0, 0);
-        }
     }
     public void ShowCursor(bool val)
     {

@@ -205,13 +205,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169474812}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12960577, y: -0, z: -0, w: 0.99156564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1537830881}
-  m_LocalEulerAnglesHint: {x: -14.894, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &169474816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 208249633}
   - component: {fileID: 208249635}
   - component: {fileID: 208249636}
+  - component: {fileID: 208249637}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -392,6 +393,19 @@ MonoBehaviour:
   RotSpeed: 3
   RotMultiplier: 1
   pivot: {fileID: 1537830881}
+--- !u!114 &208249637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208249630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2326302c636c6540b87dfb159b00d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActionController
+  rayLength: 15
 --- !u!1 &402733134
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,9 +564,10 @@ GameObject:
   - component: {fileID: 822345248}
   - component: {fileID: 822345247}
   - component: {fileID: 822345246}
+  - component: {fileID: 822345250}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -650,6 +665,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &822345250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822345245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a8f14d301ec0945afbe78d8948338c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUp
 --- !u!1 &975845799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,23 +1124,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6205849349415214443, guid: 09fbfa83b7e17cc4f9b27e1f238ecc69, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9906041
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6205849349415214443, guid: 09fbfa83b7e17cc4f9b27e1f238ecc69, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.13676085
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6205849349415214443, guid: 09fbfa83b7e17cc4f9b27e1f238ecc69, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6205849349415214443, guid: 09fbfa83b7e17cc4f9b27e1f238ecc69, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6205849349415214443, guid: 09fbfa83b7e17cc4f9b27e1f238ecc69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -15.721
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6205849349415214443, guid: 09fbfa83b7e17cc4f9b27e1f238ecc69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
