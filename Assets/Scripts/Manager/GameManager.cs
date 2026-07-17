@@ -1,5 +1,6 @@
+using System.Collections;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -19,7 +20,9 @@ public class GameManager : MonoBehaviour
 
     public void NewGame()
     {
-        Debug.Log("New Game");
+        string LevelName = "NewGame";
+        StartCoroutine(LoadSceneAsync(LevelName));
+
     }
 
     public void LoadGame()
@@ -36,4 +39,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Options");
     }
+
+    IEnumerator LoadSceneAsync(string sceneName)
+    {
+        yield return SceneManager.LoadSceneAsync(sceneName);
+    } 
+        
+
+    
 }
