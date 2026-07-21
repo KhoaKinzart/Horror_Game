@@ -4,6 +4,10 @@ public abstract class Interactable : MonoBehaviour
 {
 
     const string objTag = "Interactable";
+    private void Start()
+    {
+        Init();
+    }
     public virtual void Init()
     {
         gameObject.tag = objTag;

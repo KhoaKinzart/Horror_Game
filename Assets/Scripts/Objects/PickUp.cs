@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class PickUp : Interactable
 {
+    [SerializeField] Collectable collectable=null;
     public override void Interaction()
     {
-        Debug.Log("Found Target");
+        if (collectable != null) 
+        { 
+            GameManager.instance.inventory.AddItem(collectable,collectable.amount);
+            Destroy(gameObject);
+        }
+        
     }
 
 }

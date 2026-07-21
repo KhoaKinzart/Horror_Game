@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
+    public Inventory inventory { get;private set; }
     private void Awake()
     {
         if (instance != null)
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            inventory=GetComponentInChildren<Inventory>();
         }
     }
 
